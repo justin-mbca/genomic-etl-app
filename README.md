@@ -1,5 +1,27 @@
 # Genomic ETL Project
 
+## 🗺️ Architecture Diagram (Mermaid)
+
+```mermaid
+flowchart TD
+  A[FASTQ Upload] -->|/upload| B[FastAPI Backend]
+  B -->|Run ETL| C[ETL Pipeline (Python)]
+  C --> D[Annotated CSV]
+  D --> E[SQLite DB]
+  E -->|/results| F[React Frontend]
+```
+
+## 🧬 ETL Pipeline Steps (Mermaid)
+
+```mermaid
+flowchart LR
+  FQ[FASTQ File]
+  FQ --> VC[Simulate Variant Calling (VCF)]
+  VC --> AN[Simulate Annotation]
+  AN --> CSV[Annotated Table (CSV)]
+  CSV --> DB[Insert into SQLite]
+```
+
 ## Backend (FastAPI)
 - Run: `uvicorn main:app --reload`
 - Endpoints:
