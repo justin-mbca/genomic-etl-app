@@ -15,8 +15,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-  FQ[FASTQ File]
-  FQ --> VC[Simulate Variant Calling (VCF)]
+  FQ[FASTQ File] --> VC[Simulate Variant Calling (VCF)]
   VC --> AN[Simulate Annotation]
   AN --> CSV[Annotated Table (CSV)]
   CSV --> DB[Insert into SQLite]
