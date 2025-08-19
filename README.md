@@ -4,11 +4,11 @@
 
 ```mermaid
 flowchart TD
-  A[FASTQ Upload] -->|/upload| B[FastAPI Backend]
-  B -->|Run ETL| C[ETL Pipeline (Python)]
+  A[FASTQ Upload] --> B[FastAPI Backend]
+  B --> C[ETL Pipeline (Python)]
   C --> D[Annotated CSV]
   D --> E[SQLite DB]
-  E -->|/results| F[React Frontend]
+  E --> F[React Frontend]
 ```
 
 ## 🧬 ETL Pipeline Steps (Mermaid)
