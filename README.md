@@ -1,6 +1,7 @@
 # Genomic ETL Project
 
 ## 🗺️ Architecture Diagram (Mermaid)
+
 ```mermaid
 flowchart TD
   A[FASTQ Upload] --> B[FastAPI Backend]
