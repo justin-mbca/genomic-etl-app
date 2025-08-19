@@ -11,16 +11,6 @@ flowchart TD
   E --> F[React Frontend]
 ```
 
-## 🧬 ETL Pipeline Steps (Mermaid)
-
-```mermaid
-flowchart LR
-  FQ[FASTQ File] --> VC[Simulate Variant Calling (VCF)]
-  VC --> AN[Simulate Annotation]
-  AN --> CSV[Annotated Table (CSV)]
-  CSV --> DB[Insert into SQLite]
-```
-
 ## Backend (FastAPI)
 - Run: `uvicorn main:app --reload`
 - Endpoints:
