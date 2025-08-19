@@ -1,0 +1,6 @@
+CHROM,POS,REF,ALT,CLIN_SIG
+chr1,1010,T,A,pathogenic
+chr1,1020,G,A,benign
+chr1,1030,T,G,VUS
+chr1,1040,G,C,pathogenic
+chr1,1050,G,T,benign
