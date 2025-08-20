@@ -4,27 +4,29 @@
 
 ```mermaid
 graph TD
-    A(FASTQ Upload) --> B(FastAPI Backend)
-    B --> C(ETL Pipeline Python)
-    C --> D(Annotated CSV)
-    D --> E(SQLite DB)
-    E --> F(React Frontend)
+  A(FASTQ Upload) --> B(FastAPI Backend)
+  B --> S(Snakemake Workflow Manager)
+  S --> C(ETL Pipeline Python)
+  C --> D(Annotated CSV)
+  D --> E(SQLite DB)
+  E --> F(React Frontend)
 ```
 
 ## Technologies Used Diagram
 
 ```mermaid
 graph TD
-    FastAPI[FastAPI Backend] -->|built with| Python[Python 3]
-    FastAPI -->|framework| FastAPI_Lib[FastAPI]
-    ETL[ETL Pipeline] -->|built with| Python
-    ETL -->|data wrangling| Pandas[Pandas]
-    SQLite[SQLite DB] -->|database| SQLite_Lib[SQLite]
-    React[React Frontend] -->|built with| JS[JavaScript]
-    React -->|framework| React_Lib[React]
-    FastAPI --> SQLite
-    FastAPI --> ETL
-    FastAPI --> React
+  FastAPI[FastAPI Backend] -->|built with| Python[Python 3]
+  FastAPI -->|framework| FastAPI_Lib[FastAPI]
+  Snakemake[Snakemake Workflow] -->|orchestrates| ETL[ETL Pipeline]
+  ETL -->|built with| Python
+  ETL -->|data wrangling| Pandas[Pandas]
+  SQLite[SQLite DB] -->|database| SQLite_Lib[SQLite]
+  React[React Frontend] -->|built with| JS[JavaScript]
+  React -->|framework| React_Lib[React]
+  FastAPI --> SQLite
+  FastAPI --> Snakemake
+  FastAPI --> React
 ```
 
 ## Backend (FastAPI)
