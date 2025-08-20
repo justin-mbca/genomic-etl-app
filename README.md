@@ -3,13 +3,21 @@
 ## 🗺️ Architecture Diagram (Mermaid)
 
 ```mermaid
+graph TD
+    A[FASTQ Upload] --> B[FastAPI Backend]
+    B --> C[ETL Pipeline (Python)]
+    C --> D[Annotated CSV]
+    D --> E[SQLite DB]
+    E --> F[React Frontend]
+```
+
 flowchart TD
   A[FASTQ Upload] --> B[FastAPI Backend]
-  B --> C[ETL Pipeline (Python)]
+  B --> C[ETL Pipeline in Python]
   C --> D[Annotated CSV]
-  D --> E[SQLite DB]
+  D --> E[SQLite Database]
   E --> F[React Frontend]
-```
+
 
 ## Backend (FastAPI)
 - Run: `uvicorn main:app --reload`
