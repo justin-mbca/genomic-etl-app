@@ -20,6 +20,10 @@ graph TD
 ```mermaid
 graph TD
     A(FASTQ Upload) --> B(FastAPI Backend)
+    B --> C(ETL Pipeline Python)
+    C --> D(Annotated CSV)
+    D --> E(SQLite DB)
+    E --> F(React Frontend)
 ```
 
 ```mermaid
