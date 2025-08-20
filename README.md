@@ -1,3 +1,19 @@
+## Continuous Integration & Automated Testing
+
+This project uses GitHub Actions for CI/CD to ensure code quality and reliability.
+
+### What is tested?
+- **Backend health check**: Verifies the API root endpoint is running.
+- **Results endpoint**: Ensures `/results` returns the correct output when the database is empty.
+
+### How does CI/CD work?
+- On every push or pull request to the `main` branch:
+  - The workflow in `.github/workflows/python-app.yml` runs on Ubuntu.
+  - Installs Python 3.11 and all backend dependencies.
+  - Runs all backend unit tests in `backend/tests/` using `pytest`.
+- If any test fails, the workflow reports a failure in GitHub.
+
+This automated process helps catch issues early and keeps the backend stable.
 # Genomic ETL Project
 
 ## 🗺️ Architecture Diagram
