@@ -19,7 +19,7 @@ graph TD
 
 ```mermaid
 graph TD
-    A --> B(FastAPI Backend)
+    A(FASTQ Upload) --> B(FastAPI Backend)
 ```
 
 ```mermaid
