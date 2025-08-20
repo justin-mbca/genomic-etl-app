@@ -15,6 +15,11 @@ graph TD
     A --> E(OpenAI API)
     A --> G(Custom Rule-based Logic)
     A --> H(JSON, Regex, Standard Libraries)
+    A(FASTQ Upload) --> B(FastAPI Backend)
+    B --> C(ETL Pipeline (Python))
+    C --> D(Annotated CSV)
+    D --> E(SQLite DB)
+    E --> F(React Frontend)
 ```
 
 ```mermaid
