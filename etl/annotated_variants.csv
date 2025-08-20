@@ -1,0 +1,3 @@
+CHROM,POS,REF,ALT,CLIN_SIG
+chr1,1010,A,T,benign
+chr1,1020,G,A,benign

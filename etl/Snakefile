@@ -1,0 +1,21 @@
+# Minimal Snakemake workflow for Genomic ETL
+
+rule all:
+    input:
+        "annotated_variants.csv"
+
+rule fastq_to_vcf:
+    input:
+        fastq="sample.fastq"
+    output:
+        vcf="sample.vcf"
+    shell:
+        "python scripts/fastq_to_vcf.py {input.fastq} {output.vcf}"
+
+rule vcf_to_annotated:
+    input:
+        vcf="sample.vcf"
+    output:
+        csv="annotated_variants.csv"
+    shell:
+        "python scripts/vcf_to_annotated.py {input.vcf} {output.csv}"

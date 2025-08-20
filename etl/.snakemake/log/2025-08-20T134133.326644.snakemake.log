@@ -1,0 +1,9 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Justins-Mini
+Building DAG of jobs...
+MissingInputException in rule fastq_to_vcf in file "/Users/justin/GENOMIC_ETL_PROJECT/etl/Snakefile", line 7:
+Missing input files for rule fastq_to_vcf:
+    output: sample.vcf
+    affected files:
+        sample.fastq
