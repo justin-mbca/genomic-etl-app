@@ -63,8 +63,45 @@ graph TD
 
 You can customize the pipeline by editing the `Snakefile` and scripts in `etl/scripts/`.
 
+
 ## Frontend
-- React app for curation and review UI
+The React app provides a curation and review UI for annotated variants.
+
+### Setup & Usage
+1. Install dependencies:
+  ```bash
+  cd frontend
+  npm install
+  ```
+2. Start the development server:
+  ```bash
+  npm start
+  ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+The app will fetch and display annotated variant data from the backend API.
+## Testing & CI/CD
+
+### Running Unit Tests
+Unit tests for the FastAPI backend are located in `backend/tests/`.
+
+To run tests locally:
+```bash
+cd backend
+pytest
+```
+
+### Continuous Integration
+This project uses GitHub Actions for CI/CD. On every push or pull request, the workflow defined in `.github/workflows/python-app.yml` will:
+- Install dependencies
+- Run backend unit tests
+- Report status in GitHub
+
+## Database: SQLite and SQL Server
+
+Currently, the backend uses SQLite for simplicity and local development. To use SQL Server (MSSQL) in production, update the database connection logic in `backend/main.py` and adjust deployment settings as needed.
+
+See [FastAPI SQL Server documentation](https://fastapi.tiangolo.com/advanced/async-sql-databases/) for migration guidance.
 
 ---
 
