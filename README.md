@@ -20,6 +20,11 @@ graph TD
 ```mermaid
 graph TD
     A --> B(FastAPI Backend)
+```
+
+```mermaid
+graph TD
+    A --> B(FastAPI Backend)
     B --> C(ETL Pipeline (Python))
     C --> D(Annotated CSV)
     D --> E(SQLite DB)
