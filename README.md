@@ -1,21 +1,6 @@
 # Genomic ETL Project
 
-## 🗺️ Architecture Diagram (Mermaid)
-
-## Technologies Used Diagram
-
-```mermaid
-graph TD
-    A(Project) --> B(Python 3.9+)
-    A --> C(Gradio)
-    A --> D(Hugging Face Transformers)
-    D --> D1(BioBERT)
-    D --> D2(PubMedBERT)
-    D --> D3(ClinicalBERT)
-    A --> E(OpenAI API)
-    A --> G(Custom Rule-based Logic)
-    A --> H(JSON, Regex, Standard Libraries)
-```
+## 🗺️ Architecture Diagram
 
 ```mermaid
 graph TD
@@ -26,24 +11,21 @@ graph TD
     E --> F(React Frontend)
 ```
 
-```mermaid
-graph TD
-    A --> B(FastAPI Backend)
-    B --> C(ETL Pipeline (Python))
-    C --> D(Annotated CSV)
-    D --> E(SQLite DB)
-    E --> F(React Frontend)
-```
+## Technologies Used Diagram
 
 ```mermaid
 graph TD
-    A(FASTQ Upload) --> B(FastAPI Backend)
-    B --> C(ETL Pipeline (Python))
-    C --> D(Annotated CSV)
-    D --> E(SQLite DB)
-    E --> F(React Frontend)
+    FastAPI[FastAPI Backend] -->|built with| Python[Python 3]
+    FastAPI -->|framework| FastAPI_Lib[FastAPI]
+    ETL[ETL Pipeline] -->|built with| Python
+    ETL -->|data wrangling| Pandas[Pandas]
+    SQLite[SQLite DB] -->|database| SQLite_Lib[SQLite]
+    React[React Frontend] -->|built with| JS[JavaScript]
+    React -->|framework| React_Lib[React]
+    FastAPI --> SQLite
+    FastAPI --> ETL
+    FastAPI --> React
 ```
-
 
 ## Backend (FastAPI)
 - Run: `uvicorn main:app --reload`
