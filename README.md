@@ -2,6 +2,21 @@
 
 ## 🗺️ Architecture Diagram (Mermaid)
 
+## Technologies Used Diagram
+
+```mermaid
+graph TD
+    A(Project) --> B(Python 3.9+)
+    A --> C(Gradio)
+    A --> D(Hugging Face Transformers)
+    D --> D1(BioBERT)
+    D --> D2(PubMedBERT)
+    D --> D3(ClinicalBERT)
+    A --> E(OpenAI API)
+    A --> G(Custom Rule-based Logic)
+    A --> H(JSON, Regex, Standard Libraries)
+```
+
 ```mermaid
 graph TD
     A[FASTQ Upload] --> B[FastAPI Backend]
