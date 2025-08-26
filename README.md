@@ -96,6 +96,19 @@ The React app provides a curation and review UI for annotated variants.
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 The app will fetch and display annotated variant data from the backend API.
+
+## 🖥️ Frontend Output Example
+
+When the React frontend is running, you’ll see a table of annotated variants fetched from the backend:
+
+| CHROM |  POS  | REF | ALT |  CLIN_SIG   |
+|-------|-------|-----|-----|-------------|
+| chr1  | 1010  | T   | A   | pathogenic  |
+| chr1  | 1020  | G   | A   | benign      |
+| chr1  | 1030  | T   | G   | VUS         |
+| chr1  | 1040  | G   | C   | pathogenic  |
+| chr1  | 1050  | G   | T   | benign      |
+
 ## Testing & CI/CD
 
 ### Running Unit Tests
